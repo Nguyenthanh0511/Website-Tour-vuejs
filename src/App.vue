@@ -1,15 +1,16 @@
 <template>
   <div>
-    <Hero />
+    <Tour />
   </div>
 </template>
 
 
 <script>
-import Hero from "./components/HeroComponent.vue";
 
+// import Hero from "./components/HeroComponent.vue";
+import Tour from "./components/TourDuLich.vue";
 export default {
-  components: { Hero },
+  components: { Tour },
   data() {
     return {
     }

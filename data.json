@@ -31,14 +31,26 @@
       {
         "id": 1,
         "name": "Tour A",
-        "imageURL": "https://example.com/image1.jpg",
-        "description": "Mô tả cho Tour A"
+        "imageURL": "src/assets/illustrations/illustrationcard1.png",
+        "description": "Mô tả cho Tour A",
+        "price":2000
+
       },
       {
         "id": 2,
         "name": "Tour B",
-        "imageURL": "https://example.com/image2.jpg",
-        "description": "Mô tả cho Tour B"
+        "imageURL": "src/assets/illustrations/illustrationcard2.png",
+        "description": "Mô tả cho Tour B",
+        "price":1000
+
+      },
+      {
+        "id": 3,
+        "name": "Tour C",
+        "imageURL": "./src/assets/illustrations/illustrationcard3.png",
+        "description": "Mô tả cho Tour B",
+        "price":3000
+
       }
     ]
   }
