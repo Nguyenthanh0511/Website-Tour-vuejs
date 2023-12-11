@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid #ff0000; */
+  font-family: "Poppins", sans-serif;
+  /* visibility: hidden; */
+}
+
+::selection {
+  background-color: #e75a78;
+}
+
+.gradient-underline {
+  display: inline-block;
+  overflow: visible;
+  margin-right: -3rem;
+  margin-bottom: -4rem;
+  margin-left: -3rem;
+  padding-right: 3rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  background-image: url(./assets/illustrations/Vector.png);
+  background-position: 50% 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+.mt {
+  margin-top: -10em;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

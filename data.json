@@ -1,0 +1,45 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "user1",
+        "password": "password123",
+        "roles": ["user"]
+      },
+      {
+        "id": 2,
+        "username": "user2",
+        "password": "userpassword",
+        "roles": ["user"]
+      }
+    ],
+    "admins": [
+      {
+        "id": 1,
+        "username": "admin1",
+        "password": "adminpassword",
+        "roles": ["admin"]
+      },
+      {
+        "id": 2,
+        "username": "admin2",
+        "password": "adminpassword",
+        "roles": ["admin"]
+      }
+    ],
+    "tours": [
+      {
+        "id": 1,
+        "name": "Tour A",
+        "imageURL": "https://example.com/image1.jpg",
+        "description": "Mô tả cho Tour A"
+      },
+      {
+        "id": 2,
+        "name": "Tour B",
+        "imageURL": "https://example.com/image2.jpg",
+        "description": "Mô tả cho Tour B"
+      }
+    ]
+  }
+  
