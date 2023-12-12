@@ -6,21 +6,15 @@
       <h2>Danh Sách Tour Du Lịch</h2>
       <div class="row">
         <div
-          v-for="tour in tours"
-          :key="tour.id"
-          class="col-md-4 col-sm-12 mb-4"
+          v-for="(tour ,index) in sliceProduct " :key ="index"
+          class="col-md-6 col-xl-4 col-12 d-flex"
         >
           <!-- <router-link :to="{ name: 'tour-detail', params: { id: tour.id }}"> -->
             <!-- Sử dụng router-link để điều hướng đến trang chi tiết -->
-            <div class="card">
-              <img :src="tour.imageURL" class="card-img-top" alt="Tour Image" />
-              <div class="card-body">
-                <h5 class="card-title">{{ tour.name }}</h5>
-                <p class="card-text">{{ tour.description }}</p>
-              </div>
-            </div>
+          <TourBox :tours="tour"/>
           <!-- </router-link> -->
         </div>
+        
       </div>
     </div>
 
@@ -28,13 +22,23 @@
 </template>
 <script>
 import axios from 'axios'
-
+import TourBox from './TourBox.vue'
 export default {
- 
+ components:{TourBox},
   data() {
     return {
-      tours: [] // Dữ liệu tours sẽ được lấy từ API hoặc data.json
+      tours: [], // Dữ liệu tours sẽ được lấy từ API hoặc data.json
+      pageSize : 4,
+      currentPage :1,
     };
+  },
+  computed:{
+    startIndex(){
+      return (this.currentPage-1)*this.pageSize;
+    },
+    sliceProduct(){
+      return this.tours.slice(this.startIndex,this.startIndex + this.pageSize);
+    }
   },
   mounted() {
     // Gọi API hoặc đọc từ data.json để lấy danh sách tour
@@ -48,30 +52,15 @@ export default {
         console.error('Error fetching data:', error);
       });
   },
-  methods: {
-//     fetchTours() {
-//       // Thay đổi lấy dữ liệu từ API hoặc data.json tùy thuộc vào môi trường
-//       // Ví dụ sử dụng Axios:
-//       // axios.get('/api/tours')
-//       //   .then(response => {
-//       //     this.tours = response.data;
-//       //   })
-//       //   .catch(error => {
-//       //     console.error(error);
-//       //   });
-//       axios.get('http://localhost:3001/tours')
-//       // Giả lập dữ liệu từ data.json
-//       this.tours = require('@/data.json').tours
-//       .then(response => {
-//         // Gán dữ liệu từ response vào biến tours
-//         this.tours = response.data;
-//       })
-//       .catch(error => {
-//         console.error('Error fetching data:', error);
-//       });
-//     }
-  }
-};
+    methods:{
+      loadMore(){
+            this.currentPage++;
+          },
+        AgainMore(){
+            this.currentPage--;
+        }
+      },
+    };
 </script>
 
 <style scoped>

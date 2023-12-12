@@ -17,9 +17,9 @@
                             </div>
                             <div class="flex justify-center gap-3 mt-10 lg:justify-start" v-motion-slide-visible-once-bottom>
                                 <button class="bg-black">
-                                    <a class="hidden lg:inline-block py-4 px-9 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300"
+                                    <!-- <a class="hidden lg:inline-block py-4 px-9 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300"
                                         href="/">Start booking
-                                    </a>
+                                    </a> -->
                                 </button>
                             </div>
                         </div>
