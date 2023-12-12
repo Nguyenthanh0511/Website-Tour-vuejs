@@ -6,7 +6,6 @@
 
     <div class="container">
       <h2>Danh Sách Tour Du Lịch</h2>
-
       <div class="row">
         <div
           v-for="tour in tours"
@@ -32,7 +31,7 @@
 
 <script>
 import axios from 'axios'
-import Nav from './Navbar.vue'
+import Nav from './NavbarView.vue'
 export default {
     components:{Nav},
   data() {

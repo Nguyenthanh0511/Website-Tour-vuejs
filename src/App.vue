@@ -1,6 +1,7 @@
 <template>
   <div>
     <Tour />
+    <Footer></Footer>
   </div>
 </template>
 
@@ -9,8 +10,9 @@
 
 // import Hero from "./components/HeroComponent.vue";
 import Tour from "./components/TourDuLich.vue";
+import Footer from"./components/FooterComponent.vue";
 export default {
-  components: { Tour },
+  components: { Tour ,Footer},
   data() {
     return {
     }
