@@ -16,7 +16,7 @@
                                 </p>
                             </div>
                             <div class="flex justify-center gap-3 mt-10 lg:justify-start" v-motion-slide-visible-once-bottom>
-                                <button>
+                                <button class="bg-black">
                                     <a class="hidden lg:inline-block py-4 px-9 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300"
                                         href="/">Start booking
                                     </a>
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="order-first block w-full mt-12 aspect-square lg:mt-0 lg:order-first" v-motion-pop-visible-once>
-                        <img class="object-cover object-center w-full mx-auto lg:ml-auto" alt="hero"
+                        <img class="img object-cover object-center w-full mx-auto lg:ml-auto" alt="hero"
                             src="../assets/illustrations/man.png">
                     </div>
                 </div>
@@ -33,3 +33,12 @@
         </div>
     </section><br>
 </template>
+<style scoped>
+
+/* styles.css hoặc styles.scss hoặc tên tệp CSS của bạn */
+
+.img{
+    height:1000px;
+    width:1000px;
+}
+</style>

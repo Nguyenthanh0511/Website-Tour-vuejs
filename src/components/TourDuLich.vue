@@ -2,8 +2,6 @@
 <template>
 
   <div>
-    <Nav/>
-
     <div class="container">
       <h2>Danh Sách Tour Du Lịch</h2>
       <div class="row">
@@ -28,12 +26,11 @@
 
   </div>
 </template>
-
 <script>
 import axios from 'axios'
-import Nav from './NavbarView.vue'
+
 export default {
-    components:{Nav},
+ 
   data() {
     return {
       tours: [] // Dữ liệu tours sẽ được lấy từ API hoặc data.json

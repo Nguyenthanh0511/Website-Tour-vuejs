@@ -107,12 +107,12 @@
 </template>
 
 <script>
-const accountDropDown = document.querySelector("#navbarDropdownAccounts")
-accountDropDown.addEventListener("click",()=>{
-  const loginLink = document.querySelector(".dropdown-item[data-href='/login']")
-  // const wishListLink = document.querySelector(".dropdown-item[data-href='/wishList']")
-  loginLink.classList.toggle("show");
-})
+// const accountDropDown = document.querySelector("#navbarDropdownAccounts")
+// accountDropDown.addEventListener("click",()=>{
+//   const loginLink = document.querySelector(".dropdown-item[data-href='/login']")
+//   // const wishListLink = document.querySelector(".dropdown-item[data-href='/wishList']")
+//   loginLink.classList.toggle("show");
+// })
 
 export default {
 
