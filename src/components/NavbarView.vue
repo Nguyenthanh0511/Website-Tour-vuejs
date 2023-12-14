@@ -87,7 +87,7 @@
             Accounts
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownAccounts">
-            <router-link class="dropdown-item" :to="{ name: 'AdminView' }">Admin</router-link>
+            <router-link class="dropdown-item" :to="{ name: 'TourDuLich' }">Admin</router-link>
             <router-link v-if="!token" class="dropdown-item" :to="{ name: 'SignIn' }">Log In</router-link>
             <router-link v-if="!token" class="dropdown-item" :to="{ name: 'SignUp' }">Sign Up</router-link>
             <router-link v-if="!token" class="dropdown-item" :to="{ name: 'WishList' }">Wish list</router-link>

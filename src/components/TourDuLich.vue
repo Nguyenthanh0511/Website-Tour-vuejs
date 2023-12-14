@@ -6,7 +6,7 @@
       <h2>Danh Sách Tour Du Lịch</h2>
       <div class="row">
         <div
-          v-for="(tour ,index) in sliceProduct " :key ="index"
+          v-for="tour in tours " :key ="tour.id"
           class="col-md-6 col-xl-4 col-12 d-flex"
         >
           <!-- <router-link :to="{ name: 'tour-detail', params: { id: tour.id }}"> -->
@@ -14,7 +14,6 @@
           <TourBox :tours="tour"/>
           <!-- </router-link> -->
         </div>
-        
       </div>
     </div>
 
