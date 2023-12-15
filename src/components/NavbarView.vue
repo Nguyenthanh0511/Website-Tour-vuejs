@@ -18,7 +18,7 @@
         <div class="mt-4 col-lg-4 col-md-12 col-sm-12 col-12">
             <ul class="nav justify-content-center lg-black mt-3 ">
                 <li class="nav-item" style="border: 2px solid blue; border-top-left-radius: 10px; border-bottom-left-radius: 10px; background-color: blue; height: 40px;">
-                    <!-- <router-link class="nav-link nav-link-custom text-light"  :to="{ name: 'SignIn' }">Login</router-link> -->
+                    <router-link class="nav-link nav-link-custom text-light"  :to="{ name: 'SignIn' }">Login</router-link>
                 </li>
                 <li class="nav-item">
                     <!-- <router-link class="nav-link nav-link-custom text-light bg-secondary" :to="{ name: 'AdminView' }">Accounts</router-link> -->

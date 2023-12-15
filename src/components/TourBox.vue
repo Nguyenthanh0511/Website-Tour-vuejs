@@ -12,7 +12,24 @@
         <p class="cart-text">
           {{tour.description}}
         </p>
-        <button class="btn btn-primary">Edit</button>
+          <div>
+            <div v-if="users && users.role === 'users'">
+              <!-- Phần hiển thị cho user -->
+              <p>Welcome, {{ user.name }}! This is user content.</p>
+              <button @click="bookTour">Book</button>
+            </div>
+
+            <div v-if="user && user.role === 'admin'">
+              <!-- Phần hiển thị cho admin -->
+              <p>Welcome, {{ user.name }}! This is admin content.</p>
+              <button @click="editTour">Edit</button>
+            </div>
+
+            <div v-if="!user">
+              <!-- Phần hiển thị khi không có người dùng đăng nhập -->
+              <p>Please log in to view content.</p>
+            </div>
+        </div>
       </div>
 
   </div>
@@ -20,11 +37,16 @@
 
 <script>
 export default {
-    props:["tour"],
+    props:["tour","users"],
     data(){
       return{
+        user :null,
+        tokenAdmin:null
       }
     },
+    methods:{
+
+    }
 
 }
 

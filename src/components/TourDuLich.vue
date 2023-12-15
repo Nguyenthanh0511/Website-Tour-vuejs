@@ -9,6 +9,7 @@
         :key="tour.id"
         class="col-md-6 col-xl-4 col-12 d-flex"
       >
+      
           <!-- <router-link :to="{ name: 'tour-detail', params: { id: tour.id }}"> -->
             <!-- Sử dụng router-link để điều hướng đến trang chi tiết -->
           <TourBox :tour="tour"/>

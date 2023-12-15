@@ -1,128 +1,179 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "user1",
-        "password": "password123",
-        "roles": ["user"]
-      },
-      {
-        "id": 2,
-        "username": "user2",
-        "password": "userpassword",
-        "roles": ["user"]
-      }
-    ],
-    "admins": [
-      {
-        "id": 1,
-        "username": "admin1",
-        "password": "adminpassword",
-        "roles": ["admin"]
-      },
-      {
-        "id": 2,
-        "username": "admin2",
-        "password": "adminpassword",
-        "roles": ["admin"]
-      }
-    ],
-    "tours": [
-      {
-        "id": 1,
-        "name": "Tour A",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour A",
-        "price":2000
-
-      },
-      {
-        "id": 2,
-        "name": "Tour B",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":1000
-
-      },
-      {
-        "id": 3,
-        "name": "Tour C",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":3000
-
-      },
-      {
-        "id": 4,
-        "name": "Tour A",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour A",
-        "price":2000
-
-      },
-      {
-        "id": 5,
-        "name": "Tour B",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":1000
-
-      },
-      {
-        "id": 6,
-        "name": "Tour C",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":3000
-
-      },
-      {
-        "id": 7,
-        "name": "Tour A",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour A",
-        "price":2000
-
-      },
-      {
-        "id": 8,
-        "name": "Tour B",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":1000
-
-      },
-      {
-        "id": 9,
-        "name": "Tour C",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":3000
-
-      },  {
-        "id":10,
-        "name": "Tour A",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour A",
-        "price":2000
-
-      },
-      {
-        "id": 11,
-        "name": "Tour B",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":1000
-
-      },
-      {
-        "id": 12,
-        "name": "Tour C",
-        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
-        "description": "Mô tả cho Tour B",
-        "price":3000
-
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password123",
+      "email": "user1@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "roles": [
+        "user"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "userpassword",
+      "email": "user2@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "roles": [
+        "user"
+      ]
+    },
+    {
+      "email": "1@gmail.com",
+      "firstName": "1",
+      "lastName": "1",
+      "password": "1",
+      "id": 3
+    },
+    {
+      "email": "Thanh@gmail.com",
+      "firstName": "Thanh ",
+      "lastName": "hoa",
+      "password": "1",
+      "id": 4
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 5
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 7
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 8
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 9
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 10
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "1",
+      "id": 11
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "adminpassword",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "adminpassword",
+      "roles": [
+        "admin"
+      ]
+    }
+  ],
+  "tours": [
+    {
+      "id": 1,
+      "name": "Tour A",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour A",
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "name": "Tour B",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 1000
+    },
+    {
+      "id": 3,
+      "name": "Tour C",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 3000
+    },
+    {
+      "id": 4,
+      "name": "Tour A",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour A",
+      "price": 2000
+    },
+    {
+      "id": 5,
+      "name": "Tour B",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 1000
+    },
+    {
+      "id": 6,
+      "name": "Tour C",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 3000
+    },
+    {
+      "id": 7,
+      "name": "Tour A",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour A",
+      "price": 2000
+    },
+    {
+      "id": 8,
+      "name": "Tour B",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 1000
+    },
+    {
+      "id": 9,
+      "name": "Tour C",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 3000
+    },
+    {
+      "id": 10,
+      "name": "Tour A",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour A",
+      "price": 2000
+    },
+    {
+      "id": 11,
+      "name": "Tour B",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccfpqeDLqK2baX0jWu0aQrzHUlsNNpoA9Cw&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 1000
+    },
+    {
+      "id": 12,
+      "name": "Tour C",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RLNEvwLXTDDrwcHUL7yh7WHrnmmekk0iug&usqp=CAU",
+      "description": "Mô tả cho Tour B",
+      "price": 3000
+    }
+  ]
+}

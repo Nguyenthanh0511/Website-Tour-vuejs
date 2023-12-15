@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <Nav/>
     <hr>
     <!-- <Tour /> -->
@@ -31,6 +32,8 @@ export default {
     return {
       baseURL: "http://localhost:3001/",
       tours:null, // khởi tọa tours
+      userss:null,
+      admins:null
     }
   },
   methods: {
@@ -38,10 +41,23 @@ export default {
       await axios.get(this.baseURL +"tours")
       .then((res)=>{
         this.tours = res.data;
-
       }
       )
       .catch((err)=>console.log('err :',err))
+      await axios.get(this.baseURL +"users")
+      .then(
+        (res)=>{
+          this.users = res.data;
+        }
+      )
+      .catch((err)=>console.log('err',err));
+      await axios.get(this.baseURL +"admins")
+      .then(
+        (res)=>{
+          this.admins = res.data;
+        }
+      )
+      .catch((err)=>console.log('err',err));
     }
   },
   mounted(){
