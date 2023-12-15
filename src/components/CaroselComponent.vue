@@ -11,6 +11,17 @@
                     the best one
                 </p>
             </div>
+            <div class="flex justify-content-center mt-6 p-0" style="height:30px; ">
+                    <!-- button  -->
+                    <button  @click="previous"
+                         class=" flex-shrink-0 w-20 h-20 active:bg-[#F43F5E] hover:bg-rose-500 active:bg-rose-300 focus:outline-none ring ring-rose-300 font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 text-gray-900 text-2xl font-bold rounded-full shadow-md mr-4">
+                        &lt;
+                    </button>
+                    <button @click="next"
+                        class="flex-shrink-0 w-11 h-11 hover:bg-rose-500 active:bg-rose-300 focus:outline-none ring ring-rose-300 font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 text-gray-900 text-xl font-bold rounded-full shadow-md">
+                        &gt;
+                    </button>
+                </div>
             <div class="flex overflow-x-auto">
                 <div class="flex transition-transform duration-300 ease-in-out gap-6" ref="carousel" v-motion-slide-visible-once-right>
 
@@ -34,19 +45,14 @@
                         </div>
                         <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Himalayas , Hawaii
                         </p>
-                        <div class="mt-4 mb-5 flex justify-between">
-                            <div>
-                                <h3 class="text-sm text-gray-700">
-                                    <h5 class="text-gray-400 font-bold text-1xl tracking-tight dark:text-white">
-                                        <span class="text-[#EF1B48] text-2xl">$1,000</span>/person
-                                    </h5>
-                                </h3>
+                        <div>
+                                <router-link :to="{ name: 'TourDuLich' }" >
+                                    <button
+                                        class="btn btn-primary inline-block py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
+                                        now
+                                    </button>
+                                </router-link >
                             </div>
-                            <button
-                                class="inline-block py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
-                                now
-                            </button>
-                        </div>
                     </div>
 
                     <div class="max-w-sm max-h-fit bg-white shawdow-lg w-96 px-6 pt-6 pb-2 rounded-xl dark:bg-zinc-800">
@@ -69,19 +75,14 @@
                         </div>
                         <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Himalayas , Hawaii
                         </p>
-                        <div class="mt-4 mb-5 flex justify-between">
-                            <div>
-                                <h3 class="text-sm text-gray-700">
-                                    <h5 class="text-gray-400 font-bold text-1xl tracking-tight dark:text-white">
-                                        <span class="text-[#EF1B48] text-2xl">$1,000</span>/person
-                                    </h5>
-                                </h3>
+                         <div>
+                                <router-link :to="{ name: 'TourDuLich' }" >
+                                    <button
+                                        class="btn btn-primary inline-block py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
+                                        now
+                                    </button>
+                                </router-link >
                             </div>
-                            <button
-                                class="py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
-                                now
-                            </button>
-                        </div>
                     </div>
 
                     <div class="max-w-sm max-h-fit bg-white shawdow-lg w-96 px-6 pt-6 pb-2 rounded-xl dark:bg-zinc-800">
@@ -104,19 +105,14 @@
                         </div>
                         <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Himalayas , Hawaii
                         </p>
-                        <div class="mt-4 mb-5 flex justify-between">
-                            <div>
-                                <h3 class="text-sm text-gray-700">
-                                    <h5 class="text-gray-400 font-bold text-1xl tracking-tight dark:text-white">
-                                        <span class="text-[#EF1B48] text-2xl">$1,000</span>/person
-                                    </h5>
-                                </h3>
+                        <div>
+                                <router-link :to="{ name: 'TourDuLich' }" >
+                                    <button
+                                        class="btn btn-primary inline-block py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
+                                        now
+                                    </button>
+                                </router-link >
                             </div>
-                            <button
-                                class=" py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
-                                now
-                            </button>
-                        </div>
                     </div>
 
                     <div class="max-w-sm max-h-fit bg-white shawdow-lg w-96 px-6 pt-6 pb-2 rounded-xl dark:bg-zinc-800">
@@ -139,18 +135,16 @@
                         </div>
                         <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Himalayas , Hawaii
                         </p>
-                        <div class="mt-4 mb-5 flex justify-between">
+                       <div class="mt-4 mb-5 flex justify-between">
                             <div>
-                                <h3 class="text-sm text-gray-700">
-                                    <h5 class="text-gray-400 font-bold text-1xl tracking-tight dark:text-white">
-                                        <span class="text-[#EF1B48] text-2xl">$1,000</span>/person
-                                    </h5>
-                                </h3>
+                                <router-link :to="{ name: 'TourDuLich' }" >
+                                    <button
+                                        class="btn btn-primary inline-block py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
+                                        now
+                                    </button>
+                                </router-link >
                             </div>
-                            <button
-                                class=" py-3 px-6 bg-[#EF1B48] hover:bg-rose-500 active:bg-rose-300 focus:outline-none focus:ring focus:ring-rose-300 text-sm text-white font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 duration-300">Book
-                                now
-                            </button>
+                          
                         </div>
 
                     </div>
@@ -158,29 +152,19 @@
                 </div>
 
             </div>
-                <div class="flex justify-center mt-6">
-                    <!-- button  -->
-                    <button @click="previous"
-                        class="flex-shrink-0 w-11 h-11 active:bg-[#F43F5E] hover:bg-rose-500 active:bg-rose-300 outline-none ring ring-rose-300 font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 text-gray-900 text-xl font-bold rounded-full shadow-md mr-4">
-                        &lt;
-                    </button>
-                    <button @click="next"
-                        class="flex-shrink-0 w-11 h-11 hover:bg-rose-500 active:bg-rose-300 focus:outline-none ring ring-rose-300 font-bold rounded-full transition duration-200 transition ease-in-out delay-150 hover:scale-110 text-gray-900 text-xl font-bold rounded-full shadow-md">
-                        &gt;
-                    </button>
-                </div>
+                
         </div>
-        <Newsletter />
+        <!-- <Newsletter /> -->
 
     </div>
 </template>
 
 
 <script>
-import Newsletter from "./NewsletterComponent.vue";
+// import Newsletter from "./NewsletterComponent.vue";
 
 export default {
-    components: { Newsletter },
+    // components: { Newsletter },
 
     data() {
         return {

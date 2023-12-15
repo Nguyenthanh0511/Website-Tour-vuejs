@@ -3,7 +3,7 @@
     <div class="row">
         <!-- Logo -->
         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <router-link class="navbar-brand" :to="{ name: 'TourDuLich' }">
+            <router-link class="navbar-brand" :to="{ name: 'HomeView' }">
                 <img class="mt-0" id="logo" src="../assets/illustrations/Logo.png" />
             </router-link>
         </div>
@@ -24,7 +24,7 @@
                     <!-- <router-link class="nav-link nav-link-custom text-light bg-secondary" :to="{ name: 'AdminView' }">Accounts</router-link> -->
                 </li>
                 <li class="nav-item" style="border: 1px solid grey; height: 40px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: grey;">
-                    <!-- <router-link class="nav-link nav-link-custom text-light" :to="{ name: 'WishList' }">WishList</router-link> -->
+                    <router-link class="nav-link nav-link-custom text-light" :to="{ name: 'TourDuLich' }">TourTravel</router-link>
                 </li>
                 <!-- <router-link v-if ="this.token" class="link" :to ="{name:'Cart'}"> -->
               <a  class="cart-contents shopping-cart has-svg-icon" title="View your shopping cart" data-wpel-link="internal">
