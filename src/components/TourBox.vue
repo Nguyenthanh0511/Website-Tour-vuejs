@@ -2,15 +2,15 @@
     <div class="card">
       <div class="embed-responsive">
           <img 
-          :src="tours.imageURL" 
+          :src="tour.imageURL" 
           alt="Card image tour">
       </div>
       <div class="card-body">
         <h5 class = "card-title">
-          {{tours.name}}
+          {{tour.name}}
         </h5>
         <p class="cart-text">
-          {{tours.description}}
+          {{tour.description}}
         </p>
         <button class="btn btn-primary">Edit</button>
       </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    props:["tours"],
+    props:["tour"],
     data(){
       return{
       }
