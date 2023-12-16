@@ -70,7 +70,17 @@
                  placeholder="Password confirm" 
               />
             </div>
-
+      <!-- Đoạn mã lựa chọn user hoặc admin  -->
+          <div class="form-group" >
+            <select
+              name="roles"
+              v-model="roles"
+              class="form-control"
+            >
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
             <!-- Create Account Button -->
             <button type="submit" class="btn btn-primary mt-2 py-0">
               Create Account
@@ -92,6 +102,15 @@
         </div>
       </div>
     </div>
+     <!-- Display user information -->
+    <div v-if="users.length > 0" >
+      <h2>Users Information</h2>
+      <ul>
+        <li v-for="user in users" :key="user.id">
+          {{ user.firstName }} {{ user.lastName }} - {{ user.email }} (roles: {{ user.roles }})
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -102,35 +121,48 @@ import axios from 'axios';
     props :  ["baseURL"],
     data(){
         return {
+            id:null,
             email:null,
             firstName :null,
             lastName:null,
             password:null,
             passwordConfirm:null,
+            roles:[""],
+            users: [], // Initialize users as an empty array
         };
     },
     methods:{
+        addUserToUsers(user) {
+          this.users.push(user);
+          console.log("Updated users:", this.users);
+        },
+        
         async signup(e){
+          
             e.preventDefault();
                 if(this.password ===this.passwordConfirm){
                     //You will make the post of user 
                     const user ={
+                        id:this.id,
                         email:this.email,
                         firstName : this.firstName,
                         lastName:this.lastName,
                         password:this.password,
+                        roles:this.roles
                     }
                     //gọi tới api 
-                    await axios 
+                   
+                  await axios 
                     .post(`${this.baseURL}users`, user)
                     .then(()=>{
                         //redict to home page . it mean if you sign up a success then it redict to home page .
+                        
                         this.$router.replace("/");
                         //notification
                          swal({
-                        text: "User signup successful. Please Login",
-                        icon: "success",
-                        closeOnClickOutside: false,
+                          text: "User signup successful. Please Login",
+                          icon: "success",
+                          closeOnClickOutside: false,
                         });
                     })
                     .catch((err) => {
@@ -145,8 +177,18 @@ import axios from 'axios';
                         closeOnClickOutside: false,
                     });
                 }
-            }
-        }
+                // // Gọi API lấy token 
+                // let response = await axios.post(`${this.baseURL}users`, { 
+                //     username: this.username,
+                //     password: this.password
+                // })
+
+                // let token = response.data.token
+                // console.log('token :',token);
+            },
+            
+        },
+      
     }
 </script>
 <style scoped>

@@ -7,10 +7,171 @@
       "email": "user1@example.com",
       "firstName": "John",
       "lastName": "Doe",
-      "roles": [
-        "user"
-      ]
+      "roles": "user"
     },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "userpassword",
+      "email": "user2@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "roles": "user"
+    },
+    {
+      "email": "1@gmail.com",
+      "firstName": "1",
+      "lastName": "1",
+      "password": "1",
+      "id": 3,
+      "roles": "user"
+    },
+    {
+      "email": "Thanh@gmail.com",
+      "firstName": "Thanh ",
+      "lastName": "hoa",
+      "password": "1",
+      "id": 4,
+      "roles": "user"
+    },
+    {
+      "id": 5,
+      "email": "tytytititity@gmail.com",
+      "firstName": "Nguyen",
+      "lastName": "Thanh",
+      "password": "123",
+      "roles": "user"
+    },
+    {
+      "password": "123",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "email": "tien@gmail.com",
+      "firstName": "1",
+      "lastName": "1",
+      "password": "1",
+      "roles": "user"
+    },
+    {
+      "password": "1",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "email": "ThanhLan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "admin"
+    },
+    {
+      "password": "1",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "email": "ThanhLan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "admin"
+    },
+    {
+      "password": "1",
+      "id": 12
+    },
+    {
+      "id": 13,
+      "email": "ThanhLan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "admin"
+    },
+    {
+      "password": "1",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "email": "Lan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "admin"
+    },
+    {
+      "password": "1",
+      "id": 16
+    },
+    {
+      "id": 17,
+      "email": "Lan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "user"
+    },
+    {
+      "password": "1",
+      "id": 18
+    },
+    {
+      "id": 19,
+      "email": "Lan@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "user"
+    },
+    {
+      "password": "1",
+      "id": 20
+    },
+    {
+      "id": 21,
+      "email": "Lan2@gmail.com",
+      "firstName": "Lan",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "user"
+    },
+    {
+      "password": "1",
+      "id": 22
+    },
+    {
+      "password": "1",
+      "id": 23
+    },
+    {
+      "password": "1",
+      "id": 24
+    },
+    {
+      "password": "2",
+      "id": 25
+    },
+    {
+      "password": "1",
+      "id": 26
+    },
+    {
+      "id": 27,
+      "email": "tytytititity@gmail.com",
+      "firstName": "Nguyen",
+      "lastName": "Thanh",
+      "password": "1",
+      "roles": "admin"
+    },
+    {
+      "password": "1",
+      "id": 28
+    }
+  ],
+  "UpdateDatUsers": [
     {
       "id": 2,
       "username": "user2",
@@ -21,55 +182,6 @@
       "roles": [
         "user"
       ]
-    },
-    {
-      "email": "1@gmail.com",
-      "firstName": "1",
-      "lastName": "1",
-      "password": "1",
-      "id": 3
-    },
-    {
-      "email": "Thanh@gmail.com",
-      "firstName": "Thanh ",
-      "lastName": "hoa",
-      "password": "1",
-      "id": 4
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 5
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 6
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 7
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 8
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 9
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 10
-    },
-    {
-      "email": "1@gmail.com",
-      "password": "1",
-      "id": 11
     }
   ],
   "admins": [

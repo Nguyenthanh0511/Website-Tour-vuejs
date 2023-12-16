@@ -7,6 +7,7 @@
     <router-view v-if="tours"
     :baseURL ="baseURL"
     :tours = "tours"
+    :users = "users"
     @fetchData="fetchData"
     >
     </router-view>
@@ -32,32 +33,24 @@ export default {
     return {
       baseURL: "http://localhost:3001/",
       tours:null, // khởi tọa tours
-      userss:null,
+      users:null,
       admins:null
     }
   },
   methods: {
-    async fetchData(){
-      await axios.get(this.baseURL +"tours")
-      .then((res)=>{
-        this.tours = res.data;
+    async fetchData() {
+      try {
+        const usersResponse = await axios.get(this.baseURL + "users");
+        this.users = usersResponse.data;
+        const toursResponse = await axios.get(this.baseURL + "tours");
+        this.tours = toursResponse.data;
+
+
+        const adminsResponse = await axios.get(this.baseURL + "admins");
+        this.admins = adminsResponse.data;
+      } catch (err) {
+        console.log('Error:', err);
       }
-      )
-      .catch((err)=>console.log('err :',err))
-      await axios.get(this.baseURL +"users")
-      .then(
-        (res)=>{
-          this.users = res.data;
-        }
-      )
-      .catch((err)=>console.log('err',err));
-      await axios.get(this.baseURL +"admins")
-      .then(
-        (res)=>{
-          this.admins = res.data;
-        }
-      )
-      .catch((err)=>console.log('err',err));
     }
   },
   mounted(){
