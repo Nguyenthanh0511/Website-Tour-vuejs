@@ -44,10 +44,6 @@ export default {
         this.users = usersResponse.data;
         const toursResponse = await axios.get(this.baseURL + "tours");
         this.tours = toursResponse.data;
-
-
-        const adminsResponse = await axios.get(this.baseURL + "admins");
-        this.admins = adminsResponse.data;
       } catch (err) {
         console.log('Error:', err);
       }

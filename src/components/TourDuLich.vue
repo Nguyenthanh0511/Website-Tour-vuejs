@@ -4,12 +4,16 @@
     <div class="container">
       <h2>Danh Sách Tour Du Lịch</h2>
       <div class="row">
+      <div class="col-12 text-center">
+        <router-link :to="{name: 'AddTour'}" v-if="isRoles() ==='admin' " style="float: right"><button class="btn btn-dark">Add Tour </button></router-link>
+      </div>
+    </div>
+      <div class="row">
        <div
         v-for="tour in tours"
         :key="tour.id"
         class="col-md-6 col-xl-4 col-12 d-flex"
       >
-      
           <!-- <router-link :to="{ name: 'tour-detail', params: { id: tour.id }}"> -->
             <!-- Sử dụng router-link để điều hướng đến trang chi tiết -->
           <TourBox :tour="tour"/>
@@ -31,6 +35,12 @@ export default {
       pageSize : 4,
       currentPage :1,
     };
+  },
+  methods:{
+      isRoles(){
+        const roles = localStorage.getItem("UserRole");
+        return roles
+      }
   },
   computed:{
     startIndex(){

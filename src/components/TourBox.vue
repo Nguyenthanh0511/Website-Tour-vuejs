@@ -3,7 +3,8 @@
       <div class="embed-responsive">
           <img 
           :src="tour.imageURL" 
-          alt="Card image tour">
+          alt="Card image tour"
+          class="img-fluid" style="max-width:250px;height:auto;">
       </div>
       <div class="card-body">
         <h5 class = "card-title">
@@ -13,19 +14,17 @@
           {{tour.description}}
         </p>
           <div>
-            <div v-if="users && users.role === 'users'">
+            <div v-if="isRoles()=== 'users'">
               <!-- Phần hiển thị cho user -->
-              <p>Welcome, {{ user.name }}! This is user content.</p>
-              <button @click="bookTour">Book</button>
+              <button class="btn btn-primary" >Book</button>
             </div>
-
-            <div v-if="user && user.role === 'admin'">
+            <div v-if="isRoles() === 'admin'">
               <!-- Phần hiển thị cho admin -->
-              <p>Welcome, {{ user.name }}! This is admin content.</p>
-              <button @click="editTour">Edit</button>
+              <router-link :to="{name: 'EditTour',params:{id:tour.id}}">
+                <button class="btn btn-primary" >Edit</button>
+              </router-link>
             </div>
-
-            <div v-if="!user">
+            <div v-if="!isRoles()">
               <!-- Phần hiển thị khi không có người dùng đăng nhập -->
               <p>Please log in to view content.</p>
             </div>
@@ -40,12 +39,14 @@ export default {
     props:["tour","users"],
     data(){
       return{
-        user :null,
-        tokenAdmin:null
+        roles:null
       }
     },
     methods:{
-
+      isRoles(){
+        const roles = localStorage.getItem("UserRole");
+        return roles
+      }
     }
 
 }

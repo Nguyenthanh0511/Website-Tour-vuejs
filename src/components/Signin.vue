@@ -105,7 +105,7 @@ import UserBox from'./UserBox.vue'
 
                 if (foundUser && foundUser.password === user.password) {
                     // Đăng nhập thành công
-                localStorage.setItem("UserRole", foundUser.roles);
+                localStorage.setItem("UserRole", foundUser.roles); // khóa và value 
 
                 this.$emit("fetchData");
                 this.$router.replace("/Home");

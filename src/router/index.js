@@ -4,7 +4,8 @@ import TourDuLich from '../components/TourDuLich.vue'; // Đảm bảo đường
 import HomeView from '../components/HomeView.vue';
 import SignIn from '../components/Signin.vue';
 import SignUp from '../components/Signup.vue';
-
+import AddTour from '../components/AddTour.vue'
+import EditTour from '../components/EditTour.vue'
 const routes = [
   {
     path: '/Home',
@@ -29,6 +30,16 @@ const routes = [
     path: '/SignUp',
     name: 'SignUp',
     component: SignUp,
+  },
+  {
+    path: '/TourDuLich/new',
+    name: 'AddTour',
+    component: AddTour,
+  },
+  {
+    path: '/TourDuLich/Edit/:id',
+    name: 'EditTour',
+    component: EditTour,
   },
   // Thêm các route khác nếu cần
 ];
