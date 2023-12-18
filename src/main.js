@@ -10,9 +10,9 @@ import { MotionPlugin } from '@vueuse/motion'
 import store from "../store";
 const app = createApp(App)
 
-app.use(MotionPlugin)
 
 app.use(router)
+app.use(MotionPlugin)
 
 app.use(store);
 

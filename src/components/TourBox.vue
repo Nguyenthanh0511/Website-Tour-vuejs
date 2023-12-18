@@ -14,9 +14,11 @@
           {{tour.description}}
         </p>
           <div>
-            <div v-if="isRoles()=== 'users'">
+            <div v-if="isRoles()=== 'user'">
               <!-- Phần hiển thị cho user -->
-              <button class="btn btn-primary" >Book</button>
+              <router-link :to ="{name:'ShowDetail',params:{id:tour.id}}">
+                <button class="btn btn-primary" >Book</button>
+              </router-link>
             </div>
             <div v-if="isRoles() === 'admin'">
               <!-- Phần hiển thị cho admin -->

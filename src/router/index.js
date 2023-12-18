@@ -6,6 +6,8 @@ import SignIn from '../components/Signin.vue';
 import SignUp from '../components/Signup.vue';
 import AddTour from '../components/AddTour.vue'
 import EditTour from '../components/EditTour.vue'
+import ShowDetail from '../components/ShowDetail.vue'
+import Cart from '../components/Cart.vue'
 const routes = [
   {
     path: '/Home',
@@ -40,6 +42,16 @@ const routes = [
     path: '/TourDuLich/Edit/:id',
     name: 'EditTour',
     component: EditTour,
+  },
+  {
+    path: '/TourDuLich/ShowDetail/:id',
+    name: 'ShowDetail',
+    component: ShowDetail,
+  },
+  {
+    path: '/TourDuLich/Cart',
+    name: 'Cart',
+    component: Cart,
   },
   // Thêm các route khác nếu cần
 ];

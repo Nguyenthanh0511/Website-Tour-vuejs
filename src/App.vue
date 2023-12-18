@@ -1,13 +1,13 @@
 <template>
   <div>
-
     <Nav/>
     <hr>
     <!-- <Tour /> -->
-    <router-view v-if="tours"
+    <router-view
     :baseURL ="baseURL"
     :tours = "tours"
     :users = "users"
+    :cartTour = "cartTour"
     @fetchData="fetchData"
     >
     </router-view>
@@ -34,7 +34,8 @@ export default {
       baseURL: "http://localhost:3001/",
       tours:null, // khởi tọa tours
       users:null,
-      admins:null
+      admins:null,
+      cartTour:null,
     }
   },
   methods: {
@@ -44,6 +45,8 @@ export default {
         this.users = usersResponse.data;
         const toursResponse = await axios.get(this.baseURL + "tours");
         this.tours = toursResponse.data;
+        const response = await axios.get(this.baseURL+ "cart");
+        this.cartTour = response.data;
       } catch (err) {
         console.log('Error:', err);
       }

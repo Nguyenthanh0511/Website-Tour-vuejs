@@ -28,6 +28,7 @@
                     type=""
                     id="add-to-cart-button"
                     class="btn"
+                    @click ="addToCart(this.id)"
                     >
                     Thêm cart
                     </button>
@@ -56,41 +57,66 @@ import swal from 'sweetalert'
    export default {
   data() {
     return {
-      tour: {},
+      tour:{},
       swishlist: "Thêm danh sách",
       quantity:1,
-      id:0,
+      // cart:[],
+      tourId:0,
+      imageURL:null,
+      roles:null
     };
   },
   props: ["baseURL", "tours"],
   methods: {
-   
-//Ý tưởng là this nó vào trong cart sản phẩm tí tạo thêm lớp cart ở data.json
+   async addToCart() {
+    try {
+      const response = await axios.post(`${this.baseURL}cart`, {
+        tourId: this.tours.find(tour=>tour.id ==this.id),
+        quantity: this.quantity,
+      });
 
-//   async addToCart(){
-//     try{
-//       const response = await axios.post(`${this.baseURL}cart/add?token=${this.token}`, {
-//           productId: this.id,
-//           quantity: this.quantity,
-//         });
-//         if(response.status ==201){
-//           swal({
-//           text: "Đã thêm ",
-//           icon: "success",
-//           closeOnClickOutside: true,
-//           });
-//         }
-//     }
-//     catch(err){
-//       console.log(err);
-//     }
-//   },
+      if (response.status === 201) {
+        swal({
+          text: "Đã thêm vào giỏ hàng",
+          icon: "success",
+          closeOnClickOutside: true,
+        });
+
+        // Lưu thông tin tour vào giỏ hàng
+        // this.cart.push({
+        //   tourId: this.id,
+        //   quantity: this.quantity,
+        //   tour : this.tours.find(tour => tour.id == this.id)
+        // //   tour: this.tours, // Lưu thông tin chi tiết của tour
+        // });
+        console.log("cart :",this.cart);
+        //Đưa lên serve
+        
+        // const express = require('express');
+        // const app = express();
+        // let cart = [];
+        // app.use(express.json());
+        // app.post(`${this.baseURL}cart`,(req,res)=>{
+        //     tourId:this.id;
+        //     quantity:this.quantity;
+        //     imageURL:this.cart.tour.imageURL;
+
+
+        // })
+
+
+        this.$router.push({ name: 'Cart' });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  },
   },
   mounted() {
-    this.token = localStorage.getItem("token");
+    this.roles = localStorage.getItem("UserRole")
     this.id = this.$route.params.id;
-    this.product = this.products.find((product) => product.id == this.id);
-    this.category = this.categories.find((category) => category.id == this.product.categoryId);
+    console.log('Mounted this.id:', this.id);
+    this.tour = this.tours.find(tour => tour.id == this.id);
   },
 };
 </script>
