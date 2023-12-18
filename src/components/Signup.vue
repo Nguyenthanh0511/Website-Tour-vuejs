@@ -103,14 +103,7 @@
       </div>
     </div>
      <!-- Display user information -->
-    <div v-if="users.length > 0" >
-      <h2>Users Information</h2>
-      <ul>
-        <li v-for="user in users" :key="user.id">
-          {{ user.firstName }} {{ user.lastName }} - {{ user.email }} (roles: {{ user.roles }})
-        </li>
-      </ul>
-    </div>
+  
   </div>
 </template>
 <script>

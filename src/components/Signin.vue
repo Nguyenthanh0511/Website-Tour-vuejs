@@ -63,22 +63,17 @@
 
             </div>
    </div>
-    <div class="row">
-        <div v-for="user in users" :key="user.email">
-            <UserBox :user = "user"/>
-        </div>
-    </div>
+    
         
   </div>
 </template>
 
 <script>
 import swal from 'sweetalert';
-import UserBox from'./UserBox.vue'
 // import axios from 'axios';
     export default {
         props:["users"],
-        components: {UserBox},
+        components: {},
         name:"SigninWebsite",
         data(){
             return{
